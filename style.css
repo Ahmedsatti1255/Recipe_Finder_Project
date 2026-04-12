@@ -1,0 +1,220 @@
+/* =========================
+   Apple Design Tokens
+   ========================= */
+
+:root {
+    --bg-main: oklch(97% 0.01 260);
+    --bg-glass: oklch(100% 0 0 / 0.65);
+    --border-glass: oklch(70% 0.02 260 / 0.25);
+
+    --text-primary: oklch(25% 0.02 260);
+    --text-secondary: oklch(45% 0.02 260);
+
+    --accent-blue: oklch(55% 0.16 260);
+    --accent-blue-hover: oklch(50% 0.18 260);
+
+    --danger-red: oklch(60% 0.18 25);
+
+    --radius-lg: 16px;
+    --radius-md: 12px;
+
+    --shadow-soft: 0 10px 30px oklch(0% 0 0 / 0.15);
+    --shadow-hover: 0 15px 40px oklch(0% 0 0 / 0.2);
+
+    --blur: blur(20px);
+}
+
+/* =========================
+   Global Styles
+   ========================= */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "SF Pro Display", system-ui, sans-serif;
+
+    background:
+        radial-gradient(circle at top, oklch(98% 0.02 260), oklch(95% 0.01 260));
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+/* =========================
+   Navigation Bar (macOS Toolbar)
+   ========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+
+    border-bottom: 1px solid var(--border-glass);
+    padding: 14px 24px;
+
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* =========================
+   Forms (Apple Inputs)
+   ========================= */
+
+form {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+
+    border-radius: var(--radius-md);
+    font-size: 16px;
+}
+
+form input {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+
+    border: 1px solid var(--border-glass);
+    outline: none;
+}
+
+form input:focus {
+    border-color: var(--accent-blue);
+}
+
+form button {
+    background: var(--accent-blue);
+    color: #fff;
+
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease,
+                background 0.15s ease;
+}
+
+form button:hover {
+    background: var(--accent-blue-hover);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Cards / Results (Glass Cards)
+   ========================= */
+
+.product,
+.search-result {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+
+    box-shadow: var(--shadow-soft);
+}
+
+.product h3,
+.search-result h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+/* =========================
+   Buttons / Links (macOS Style)
+   ========================= */
+
+.product a,
+.search-result a {
+    display: inline-block;
+
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent-blue);
+
+    padding: 8px 14px;
+    border-radius: 10px;
+    margin-right: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background 0.15s ease,
+                transform 0.15s ease;
+}
+
+.product a:hover,
+.search-result a:hover {
+    background: var(--accent-blue-hover);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Remove Button
+   ========================= */
+
+.remove-btn {
+    background: var(--danger-red);
+}
+
+.remove-btn:hover {
+    filter: brightness(0.9);
+}
+
+/* =========================
+   Horizontal Rule
+   ========================= */
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--border-glass);
+    margin: 20px 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.empty-state {
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+
