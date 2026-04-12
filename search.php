@@ -378,8 +378,8 @@ include 'db.php';
         <?php
         if(isset($_GET['q'])){
             $query = urlencode($_GET['q']." recipe");
-            $apiKey = "AIzaSyA3_xoBDiyVcgeYpFj-ZhbQE7m-3hlr3HA";
-            $cx = "363d887e951aa4103";
+            $apiKey = "Searchapikey";
+            $cx = "cxkey";
 
             $url = "https://www.googleapis.com/customsearch/v1?q=$query&key=$apiKey&cx=$cx";
             $response = file_get_contents($url);
