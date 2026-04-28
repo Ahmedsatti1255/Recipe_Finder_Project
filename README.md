@@ -46,9 +46,3 @@ Recipe Finder is a web app that uses the **Google Search API** to find recipes a
 ```
 2. Add your Google Search API key to the config
 3. Open `index.html` in your browser
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
