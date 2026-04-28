@@ -42,7 +42,7 @@ Recipe Finder is a web app that uses the **Google Search API** to find recipes a
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/your-username/Recipe_Finder_Project.git
+   git clone https://github.com/Ahmedsatti1255/Recipe_Finder_Project.git
 ```
 2. Add your Google Search API key to the config
 3. Open `index.html` in your browser
